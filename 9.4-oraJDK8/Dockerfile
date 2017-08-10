@@ -1,5 +1,5 @@
-FROM uandrew1965/java-sdk:1.8.0.144-b01
-GitHub after transfer rep where one
+FROM ivc-inform/java-sdk:1.8.0.144-b01
+
 # add our user and group first to make sure their IDs get assigned consistently, regardless of whatever dependencies get added
 RUN groupadd -r jetty \
     && useradd -r -g jetty jetty

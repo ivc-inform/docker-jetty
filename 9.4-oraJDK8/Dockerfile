@@ -44,4 +44,4 @@ RUN set -xe \
 COPY docker-entrypoint.sh /
 
 EXPOSE 8080
-ENTRYPOINT ["/docker-entrypoint.sh"]
+##ENTRYPOINT ["/docker-entrypoint.sh"]

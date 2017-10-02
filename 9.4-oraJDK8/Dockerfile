@@ -9,7 +9,7 @@ ENV PATH $JETTY_HOME/bin:$PATH
 RUN mkdir -p $JETTY_HOME
 WORKDIR $JETTY_HOME
 
-ENV JETTY_VERSION="9.4.6.v20170531"
+ENV JETTY_VERSION="9.4.7.v20170914"
 
 ENV JETTY_TGZ_URL https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-home/$JETTY_VERSION/jetty-home-$JETTY_VERSION.tar.gz
 

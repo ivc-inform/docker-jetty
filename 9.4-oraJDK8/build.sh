@@ -1,6 +1,6 @@
 docker stop jetty946_v20170531
 docker rm jetty946_v20170531
-docker build --no-cache --force-rm --tag ivcinform/jetty:9.4.6.v20170531 .
+docker build --no-cache --force-rm --tag ivcinform/jetty:9.4.7.v20170914 .
 
 ##docker push ivcinform/jetty:9.4.6.v20170531
 

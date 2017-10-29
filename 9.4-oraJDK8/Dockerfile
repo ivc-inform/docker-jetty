@@ -1,4 +1,4 @@
-FROM ivcinform/java-sdk:1.8.0.144-b01-1
+FROM ivcinform/java-sdk:1.8.0.151-b12
 
 # add our user and group first to make sure their IDs get assigned consistently, regardless of whatever dependencies get added
 RUN groupadd -r jetty \

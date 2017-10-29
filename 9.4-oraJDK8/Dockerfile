@@ -1,5 +1,7 @@
 FROM ivcinform/java-sdk:1.8.0.151-b12
 
+ENV DEBIAN_FRONTEND "noninteractive"
+
 # add our user and group first to make sure their IDs get assigned consistently, regardless of whatever dependencies get added
 RUN groupadd -r jetty \
     && useradd -r -g jetty jetty
@@ -17,7 +19,7 @@ RUN set -xe \
  && sed -i -e 's/us.archive.ubuntu.com/archive.ubuntu.com/g' /etc/apt/sources.list \
  && apt-get update \
  && apt-get upgrade -y -o Dpkg::Options::="--force-confold" \
- && DEBIAN_FRONTEND=noninteractive apt-get install -y curl mc nano \
+ && apt-get install -y curl mc nano \
 	&& curl -SL $JETTY_TGZ_URL -o jetty.tar.gz \
 	&& curl -SL $JETTY_TGZ_URL.asc -o jetty.tar.gz.asc \
 	&& export GNUPGHOME="$(mktemp -d)" \
